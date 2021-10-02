@@ -1,0 +1,528 @@
+<!doctype html>
+<html>
+    <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta charset="utf-8">
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+      <link rel="stylesheet" href="assets/css/style.css">
+            <title>
+            Portfolio@Alsa.in
+            </title>
+            <style>
+                #carouselExampleControlsNoTouching{
+                    width: auto;
+                    height:auto;
+                    margin-top: 10px;
+                    margin-bottom: 10px;
+                    margin-left: 10px;
+                    margin-right: 10px;
+                }           
+                    body {
+                font-family: "Lato", sans-serif;
+              }
+                #div1{
+                  background: linear-gradient(to bottom, #020303 0%, #230568 100%);
+                }
+                #div2{
+                  background: linear-gradient(to bottom, #020303 0%, #230568 100%);
+                }
+              .sidebar {
+                height: 100%;
+                width: 0;
+                position: fixed;
+                z-index: 1;
+                top: 0;
+                left: 0;
+                background-color: #111;
+                overflow-x: hidden;
+                transition: 0.5s;
+                padding-top: 60px;
+              }
+
+              .sidebar a {
+                padding: 8px 8px 8px 32px;
+                text-decoration: none;
+                font-size: 25px;
+                color: #818181;
+                display: block;
+                transition: 0.3s;
+              }
+
+              .sidebar a:hover {
+                color: #f1f1f1;
+              }
+
+              .sidebar .closebtn {
+                position: absolute;
+                top: 0;
+                right: 25px;
+                font-size: 36px;
+                margin-left: 50px;
+              }
+
+              .openbtn {
+                font-size: 20px;
+                cursor: pointer;
+                background-color: #111;
+                color: white;
+                padding: 10px 15px;
+                border: none;
+              }
+
+              .openbtn:hover {
+                background-color: #444;
+              }
+
+              #main {
+                transition: margin-left .5s;
+                padding: 16px;
+              }
+
+              /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+              @media screen and (max-height: 450px) {
+                .sidebar {padding-top: 15px;}
+                .sidebar a {font-size: 18px;}
+              }
+              * {box-sizing: border-box}
+
+              .container {
+                width: 100%;
+                background-color: #ddd;
+                float: left;
+              }
+
+              .skills {
+                text-align: right;
+                padding-top: 10px;
+                padding-bottom: 10px;
+                color: white;
+              }
+
+              .html {width: 90%; background-color: #2511dd;}
+              .css {width: 80%; background-color: #17c3c9;}
+              .js {width: 65%; background-color: #c717f3;}
+              .php {width: 60%; background-color: #ffc401;}
+              
+              * {box-sizing: border-box;}
+                .img-comp-container {
+                  position: relative;
+                  height: 200px; /*should be the same height as the images*/
+                }
+
+                .img-comp-img {
+                  position: absolute;
+                  width: auto;
+                  height: auto;
+                  overflow:hidden;
+                }
+
+                .img-comp-img img {
+                  display:block;
+                  vertical-align:middle;
+                }
+
+                .img-comp-slider {
+                  position: absolute;
+                  z-index:9;
+                  cursor: ew-resize;
+                  /*set the appearance of the slider:*/
+                  width: 40px;
+                  height: 40px;
+                  background-color: #2196F3;
+                  opacity: 0.7;
+                  border-radius: 50%;
+                }
+                  .footer-basic {
+                  padding:40px 0;
+                  background-color:#000000;
+                  color:#4b4c4d;
+                }
+
+                .footer-basic ul {
+                  padding:0;
+                  list-style:none;
+                  text-align:center;
+                  font-size:18px;
+                  line-height:1.6;
+                  margin-bottom:0;
+                }
+
+                .footer-basic li {
+                  padding:0 10px;
+                }
+
+                .footer-basic ul a {
+                  color:inherit;
+                  text-decoration:none;
+                  opacity:0.8;
+                }
+
+                .footer-basic ul a:hover {
+                  opacity:1;
+                }
+
+                .footer-basic .social {
+                  text-align:center;
+                  padding-bottom:25px;
+                }
+
+                .footer-basic .social > a {
+                  font-size:24px;
+                  width:40px;
+                  height:40px;
+                  line-height:40px;
+                  display:inline-block;
+                  text-align:center;
+                  border-radius:50%;
+                  border:1px solid #ccc;
+                  margin:0 8px;
+                  color:inherit;
+                  opacity:0.75;
+                }
+
+                .footer-basic .social > a:hover {
+                  opacity:0.9;
+                }
+
+                .footer-basic .copyright {
+                  margin-top:15px;
+                  text-align:center;
+                  font-size:13px;
+                  color:#aaa;
+                  margin-bottom:0;
+                }
+                /* GLOBAL STYLES */
+                body {
+                  background: #333;
+                  display: flex;
+                  justify-content: center;
+                }
+
+                /* DEMO-SPECIFIC STYLES */
+                .typewriter h1 {
+                  color: #fff;
+                  font-family: monospace;
+                  overflow: hidden; /* Ensures the content is not revealed until the animation */
+                  border-right: .15em solid orange; /* The typwriter cursor */
+                  white-space: nowrap; /* Keeps the content on a single line */
+                  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+                  letter-spacing: .15em; /* Adjust as needed */
+                  animation: 
+                    typing 3.5s steps(30, end),
+                    blink-caret .5s step-end infinite;
+                }
+
+                /* The typing effect */
+                @keyframes typing {
+                  from { width: 0 }
+                  to { width: 70% }
+                }
+
+                /* The typewriter cursor effect */
+                @keyframes blink-caret {
+                  from, to { border-color: transparent }
+                  50% { border-color: orange }
+                }
+                .glow {
+                font-size: 80px;
+                color: #fff;
+                text-align: center;
+                animation: glow 1s ease-in-out infinite alternate;
+                padding-top: 55px;
+              }
+              @-webkit-keyframes glow {
+                from {
+                  text-shadow: 0 0 10px #fff, 0 0 20px rgb(33, 174, 255), 0 0 30px #348cff, 0 0 40px #2e62f1, 0 0 50px #3700ff, 0 0 60px #7b07ff, 0 0 70px #e202ff;
+                }
+                
+                to {
+                  text-shadow: 0 0 20px #fff, 0 0 30px #d54dff, 0 0 40px #f32de2, 0 0 50px #932cf3, 0 0 60px #7704d4, 0 0 70px #0509e0, 0 0 80px #29009b;
+                }
+              }
+              .but:hover{
+               color:#3700ff;
+              }
+              #des{
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                font-size:large ;
+              }
+         
+            </style>
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+            <link href="port.css" rel="stylesheet" type="text/css">
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+            <script>
+              function openNav() {
+                document.getElementById("mySidebar").style.width = "250px";
+                document.getElementById("main").style.marginLeft = "250px";
+              }
+
+              function closeNav() {
+                document.getElementById("mySidebar").style.width = "0";
+                document.getElementById("main").style.marginLeft= "0";
+              }
+            $(document).ready(function(){
+              $("button").click(function(){
+              
+                $("#div2").fadeToggle();
+              });
+            });
+            function initComparisons() {
+                var x, i;
+                /*find all elements with an "overlay" class:*/
+                x = document.getElementsByClassName("img-comp-overlay");
+                for (i = 0; i < x.length; i++) {
+                  /*once for each "overlay" element:
+                  pass the "overlay" element as a parameter when executing the compareImages function:*/
+                  compareImages(x[i]);
+                }
+                function compareImages(img) {
+                  var slider, img, clicked = 0, w, h;
+                  /*get the width and height of the img element*/
+                  w = img.offsetWidth;
+                  h = img.offsetHeight;
+                  /*set the width of the img element to 50%:*/
+                  img.style.width = (w / 2) + "px";
+                  /*create slider:*/
+                  slider = document.createElement("DIV");
+                  slider.setAttribute("class", "img-comp-slider");
+                  /*insert slider*/
+                  img.parentElement.insertBefore(slider, img);
+                  /*position the slider in the middle:*/
+                  slider.style.top = (h / 2) - (slider.offsetHeight / 2) + "px";
+                  slider.style.left = (w / 2) - (slider.offsetWidth / 2) + "px";
+                  /*execute a function when the mouse button is pressed:*/
+                  slider.addEventListener("mousedown", slideReady);
+                  /*and another function when the mouse button is released:*/
+                  window.addEventListener("mouseup", slideFinish);
+                  /*or touched (for touch screens:*/
+                  slider.addEventListener("touchstart", slideReady);
+                  /*and released (for touch screens:*/
+                  window.addEventListener("touchend", slideFinish);
+                  function slideReady(e) {
+                    /*prevent any other actions that may occur when moving over the image:*/
+                    e.preventDefault();
+                    /*the slider is now clicked and ready to move:*/
+                    clicked = 1;
+                    /*execute a function when the slider is moved:*/
+                    window.addEventListener("mousemove", slideMove);
+                    window.addEventListener("touchmove", slideMove);
+                  }
+                  function slideFinish() {
+                    /*the slider is no longer clicked:*/
+                    clicked = 0;
+                  }
+                  function slideMove(e) {
+                    var pos;
+                    /*if the slider is no longer clicked, exit this function:*/
+                    if (clicked == 0) return false;
+                    /*get the cursor's x position:*/
+                    pos = getCursorPos(e)
+                    /*prevent the slider from being positioned outside the image:*/
+                    if (pos < 0) pos = 0;
+                    if (pos > w) pos = w;
+                    /*execute a function that will resize the overlay image according to the cursor:*/
+                    slide(pos);
+                  }
+                  function getCursorPos(e) {
+                    var a, x = 0;
+                    e = (e.changedTouches) ? e.changedTouches[0] : e;
+                    /*get the x positions of the image:*/
+                    a = img.getBoundingClientRect();
+                    /*calculate the cursor's x coordinate, relative to the image:*/
+                    x = e.pageX - a.left;
+                    /*consider any page scrolling:*/
+                    x = x - window.pageXOffset;
+                    return x;
+                  }
+                  function slide(x) {
+                    /*resize the image:*/
+                    img.style.width = x + "px";
+                    /*position the slider:*/
+                    slider.style.left = img.offsetWidth - (slider.offsetWidth / 2) + "px";
+                  }
+                }
+              }
+            </script>
+    </head>
+    <body>
+      <div="container-fluid">
+        <nav id="nav" class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img src="image/oki.jpg" alt="" width="30" height="24" style="border-radius: 100%;">
+                  </a>
+              <a class="navbar-brand" href="#">Portfolio</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse typewriter" id="navbarNav">
+                <h1> Explore. Dream. Discover.</h1>              
+              </div>
+            </div>
+          </nav>
+          <div id="mySidebar" class="sidebar">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+            <a href="#About">About Me</a>
+            <a href="#Academic">Academic Board</a>
+            <a href="#skills">Features</a>
+            <a href="#work">Project Dashboard</a>
+            <a href="#Contact">Contact me</a>
+          </div>
+          
+          <div id="main" class="text-white">
+            <button class="openbtn" onclick="openNav()">☰ Open Sidebar</button>  
+          </div>          
+          <div class="container-fluid" style="height: 600px; width:auto; background-color: rgb(0, 0, 0); margin-left: 20px; margin-right: 20px; margin-top: 20px; margin-bottom: 20px; border-radius: 25px;">
+          <div id="carouselExampleControlsNoTouching" class="carousel slide container-fluid" data-bs-touch="false" data-bs-interval="false" style="padding-top:50px;" >
+            <div class="carousel-inner">
+              <div class="carousel-item active container-fluid">
+                <img src="Image/exploree.jpeg" style="border-radius: 25px; height: 500px; width:1250px; margin-left:10px; margin-top:10px;">
+              </div>
+              <div class="carousel-item">
+                <img src="Image/this.jpg" class="d-block w-100" alt="k" style="border-radius: 25px; height: 500px; width: 600px;">
+              </div>
+              <div class="carousel-item">
+                <img src="Image/yes.jpeg" class="d-block w-100" alt="web" style="border-radius: 25px; height: 500px; width:600px">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+          </div>
+        </div>
+        <div id="About" class="text-white" style="border-radius: 15%; margin-left: 20px; margin-right: 20px; margin-top: 20px; margin-bottom: 20px;" >
+          <h1 class="glow">ABOUT ME</h1>
+          <div class="row">
+            <div class="col-md-6">
+          <img src="Image/1.jpg" style="width:400px; height: 550px; border-radius:20%; margin-left:100px; margin-top: 50px; margin-bottom: 75px; margin-right: 150px;">
+        </div>
+        <div  id="des" class="col-md-6" style="padding-top: 150px; padding-left:5px; padding-right: 10px; ">
+            Hello!<br>
+            It's me, Alsaniya Hussain, a college fresher pursuing an undergrad degree in CSE Artificial Intelligence and Machine Learning.
+            A passionate learner and designer, currently focusing on mastering my web development and coding skills.
+            I am looking forward to explore new avenues of the designing and development domain.
+            <br><br>"Craving to grab my piece of sky, under the sun."
+            <br>while(!(succeed=try()));
+              <br><br>Eager to learn more.
+
+        </div>
+      </div>
+      </div>
+    </div>
+
+        <div id="Academic" class="row container-fluid" style="height: 650px; width:auto; background-color: rgb(0, 0, 0); margin-left: 20px; margin-right: 20px; margin-top: 20px; margin-bottom: 20px; border-radius: 15%;">
+          <h1 class="glow">ACADEMIC DASHBOARD</h1>
+          <div class="card col-md-4" style="height: 400px; width:350px;  margin-top:50px; margin-left: auto; margin-right: 10px; margin-bottom: 50px;">
+          <div class="card-header">
+            <img src="https://img1.wsimg.com/isteam/ip/c5636665-16a7-4ba1-a367-79a75d164a01/civil%20lines.jpg/:/">
+          </div>
+          <div class="card-body bg-dark  text-white">
+            <h5 class="card-title">Bhavans Bhagwandas Vidya Mandir, Civil Lines('18)</h5>
+            <p class="card-text">Completed my primary and middle school education.</p>
+            <a href="http://www.bvmcl.edu.in/" class="btn btn-primary" target="_blank">Visit Site</a>
+          </div>
+        </div>
+        <div class="card col-md-4" style="height: 400px; width:350px; margin-top: 50px; margin-left: 10px; margin-right: 10px; margin-bottom: 50px;">
+          <div class="card-header">
+            <img src="image/hislop.png" style="width:285px; height: 183px;">
+          </div>
+          <div class="card-body bg-dark text-white">
+            <h5 class="card-title">Hislop Junior College, Civil Lines('20)</h5>
+            <p class="card-text">Accomplised my high school education in Science PCM stream.</p>
+            <a href="https://hislopcollege.ac.in/" class="btn btn-primary" target="_blank">Visit Site</a>
+          </div>
+        </div>
+        <div class="card col-md-4" style="height: 400px; width:350px; margin-top: 50px; margin-left: 10px; margin-right: auto; margin-bottom: 50px;">
+          <div class="card-header">
+            <img src="https://lh3.googleusercontent.com/proxy/ZdQDGM9xjfmK1L2ZLjlG2yipJxFkkBmzkDEmRqhWej5nobV_qE83OkVF4FM0R7YswMMM6tZfV2s-3g" style="width:275px; height: 183px;">
+          </div>
+          <div class="card-body bg-dark text-white">
+            <h5 class="card-title">Shri Ramdeobaba College of Engineering('24)</h5>
+            <p class="card-text">Currently pursuing my undergrad in CSE Artificial intelligence & Machine Learning</p>
+            <a href="http://www.rknec.edu/" class="btn btn-primary" target="_blank">Visit Site</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+   <div id="skills" class=" text-white container-fluid" style="height: 600px; width:auto; background-color: rgb(0, 0, 0); margin-left: 50px; margin-right: 20px; margin-top: 20px; margin-bottom: 20px; border-radius: 15%;">
+    <h1 class="glow">Features</h1>
+
+ 
+ <div class="row">
+   <div id="div1" class="col-md-4" style="width:500px;height:450px; margin-left:175px; margin-top:25px;">
+    <h3 class="ski"><br><br>An upcoming software engineer by profession, I am currently working on my coding, designing and development skills.
+      <br> I have learnt and mastered the following programming languages, along with some project aka practical experience in each of it.
+    </h3>
+    <button class="but text-white" style="width:300px; height:55px; border-radius:10px; background-color: rgb(0, 0, 0); margin-left: 50px; margin-top:20px;">Click here to see my progress</button><br><br></div>
+    <div id="div2" class="col-md-4" style="width:500px;height:450px; margin-top:25px;">
+      <h1>My Skills</h1>
+
+        <p>HTML</p>
+        <div class="container">
+          <div class="skills html">90%</div>
+        </div>
+
+        <p>CSS</p>
+        <div class="container">
+          <div class="skills css">80%</div>
+        </div>
+
+        <p>JavaScript</p>
+        <div class="container">
+          <div class="skills js">65%</div>
+        </div>
+
+        <p>C Language</p>
+        <div class="container">
+          <div class="skills php">60%</div>
+        </div>
+            </div>
+            </div>
+   </div>
+            <div id="work" class="text-white" style="height: 700px; width:auto; background-color: rgb(0, 0, 0); margin-left: 20px; margin-right: 20px; margin-top: 20px; margin-bottom: 20px; border-radius: 15%;">
+            
+              <h1 class="glow">PROJECT DASHBOARD</h1>
+              
+              <div class="img-comp-container" style="margin-left:300px; margin-top:100px; " >
+                <div class="img-comp-img">
+                  <img src="Image/bookwa.png" width="750" height="400">
+                </div>
+                <div class="img-comp-img img-comp-overlay">
+                  <img src="Image/figma1.png" width="750" height="400">
+                </div>
+              </div>
+              <script>
+                /*Execute a function that will execute an image compare function for each element with the img-comp-overlay class:*/
+                initComparisons();
+                </script>
+            </div>
+            <div class="footer-basic">
+              <footer>
+                  <div id="Contact" class="social"><a href="#"><i class="icon ion-social-instagram"></i></a><a href="#"><i class="icon ion-social-snapchat"></i></a><a href="#"><i class="icon ion-social-twitter"></i></a><a href="#"><i class="icon ion-social-facebook"></i></a></div>
+                  <ul class="list-inline">
+                      <li class="list-inline-item"><a href="#">Home</a></li>
+                      <li class="list-inline-item"><a href="#">Services</a></li>
+                      <li class="list-inline-item"><a href="#">About</a></li>
+                      <li class="list-inline-item"><a href="#">Terms</a></li>
+                      <li class="list-inline-item"><a href="#">Privacy Policy</a></li>
+                  </ul>
+                  <p class="copyright">Company Name © 2021</p>
+              </footer>
+          </div>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+        </div>
+    </body>
+</html>
